@@ -6,7 +6,6 @@ public class Car implements Moveable{
 	public static Car getInstance(){
 		return car;
 	}
-	@Override
 	public void run(){
 		
 		System.out.println("冒着烟去 东北");

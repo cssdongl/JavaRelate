@@ -7,7 +7,6 @@ import java.util.List;
  * @Copyright: Copyright (c) 2015
  * @Description: 交互数据 json model<br>
  *               <br>
- * @Company: jj.com
  */
 public class InteractiveData {
 	private String deviceid;
@@ -36,41 +35,6 @@ public class InteractiveData {
 	private List<MainThread> mainthread;
 	private List<WorkThread> workthread;
 
-	// public InteractiveData(String deviceid, String appname, String
-	// apppackage, String appver, String os,
-	// String osversion, String sysversion, String devicefactory, String
-	// devicebrand, String devicename,
-	// String sdkversion, String resolution, String clientip, String county,
-	// String region, String city,
-	// String network, String operator, String time, String reqtype, String url,
-	// String serverip, String reserror,
-	// String rescode, int restime, int tcptime, int dnstime, int ssltime, int
-	// firsttime, int dataquantity,
-	// int datetime) {
-	// super();
-	// this.deviceid = deviceid;
-	// this.appname = appname;
-	// this.apppackage = apppackage;
-	// this.appver = appver;
-	// this.os = os;
-	// this.osversion = osversion;
-	// this.sysversion = sysversion;
-	// this.devicefactory = devicefactory;
-	// this.devicebrand = devicebrand;
-	// this.devicename = devicename;
-	// this.resolution = resolution;
-	// this.clientip = clientip;
-	// this.county = county;
-	// this.region = region;
-	// this.city = city;
-	// this.network = network;
-	// this.operator = operator;
-	// this.time = time;
-	// }
-	//
-	// public InteractiveData() {
-	// super();
-	// }
 
 	public static class MemoryInfo {
 		private int memory;
