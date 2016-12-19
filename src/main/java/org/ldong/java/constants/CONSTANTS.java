@@ -5,9 +5,7 @@ package org.ldong.java.constants;
  * @Copyright: Copyright (c) 2015
  * @Description: <br>
  *             程序用到的常量类  <br>
- * @Company: jj.com
  * @Created on 2015年7月30日 下午10:12:15
- * @author wangmj
  */
 public class CONSTANTS {
 	public static final String CODEUTF8 = "UTF-8";

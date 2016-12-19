@@ -119,4 +119,33 @@ public final class TimeUtil {
 		instance.set(Calendar.MINUTE, instance.get(instance.MINUTE) + i);
 		return format.format(instance.getTime());
 	}
+
+	private String[] getTimePartitions(String timeField) {
+		String[] timePartitions = new String[4];
+		try {
+			Date date = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").parse(timeField);
+			Calendar now = Calendar.getInstance();
+			now.setTime(date);
+
+			timePartitions[0] = String.valueOf(now.get(Calendar.YEAR));
+			String monthPartition = String.valueOf(now.get(Calendar.MONTH) + 1).length() == 1
+					? ("0" + String.valueOf(now.get(Calendar.MONTH) + 1))
+					: (String.valueOf(now.get(Calendar.MONTH) + 1));
+			String dayPartition = String.valueOf(now.get(Calendar.DAY_OF_MONTH)).length() == 1
+					? ("0" + String.valueOf(now.get(Calendar.DAY_OF_MONTH)))
+					: (String.valueOf(now.get(Calendar.DAY_OF_MONTH)));
+			String hourPartition = String.valueOf(now.get(Calendar.HOUR_OF_DAY)).length() == 1
+					? ("0" + String.valueOf(now.get(Calendar.HOUR_OF_DAY)))
+					: (String.valueOf(now.get(Calendar.HOUR_OF_DAY)));
+			timePartitions[1] = monthPartition;
+			timePartitions[2] = dayPartition;
+			timePartitions[3] = hourPartition;
+			for(String partition:timePartitions){
+				System.out.println(partition);
+			}
+		} catch (ParseException e) {
+			e.printStackTrace();
+		}
+		return timePartitions;
+	}
 }
