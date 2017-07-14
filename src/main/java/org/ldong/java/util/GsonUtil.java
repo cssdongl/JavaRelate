@@ -1,11 +1,6 @@
 
 package org.ldong.java.util;
 
-import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
-
-import java.util.List;
-
 /**
  * @Title: GsonUtil.java
  * @Description: 利用gson解析嵌套json
@@ -23,11 +18,11 @@ public class GsonUtil {
 	 * @return
 	 * @since JDK 1.7
 	 */
-	public static <T> T parseJsonWithGson(String jsonData, Class<T> type) {
-		Gson gson = new Gson();
-		T result = gson.fromJson(jsonData, type);
-		return result;
-	}
+//	public static <T> T parseJsonWithGson(String jsonData, Class<T> type) {
+//		Gson gson = new Gson();
+//		T result = gson.fromJson(jsonData, type);
+//		return result;
+//	}
 
 	
 	/**
@@ -38,10 +33,10 @@ public class GsonUtil {
 	 * @return
 	 * @since JDK 1.7
 	 */
-	public static <T> List<T> parseJsonArrayWithGson(String jsonData, Class<T> type) {
-		Gson gson = new Gson();
-		List<T> result = gson.fromJson(jsonData, new TypeToken<List<T>>() {
-		}.getType());
-		return result;
-	}
+//	public static <T> List<T> parseJsonArrayWithGson(String jsonData, Class<T> type) {
+//		Gson gson = new Gson();
+//		List<T> result = gson.fromJson(jsonData, new TypeToken<List<T>>() {
+//		}.getType());
+//		return result;
+//	}
 }
